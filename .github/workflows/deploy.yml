@@ -23,10 +23,7 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x
-      
-      - name: Install dependencies
-        run: deno task install
+          deno-version: v2.x
       
       - name: Build with Astro
         run: deno task build
