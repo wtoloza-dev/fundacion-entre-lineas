@@ -1,19 +1,9 @@
 ---
+import BaseLayout from '@layouts/BaseLayout.astro';
 import Button from '@components/atoms/Button.astro';
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro + Biome</title>
-  </head>
-  <body>
-    <main style="padding: 2rem; text-align: center;">
-      <h1>Astro + Biome</h1>
-      <Button>Mi Botón</Button>
-    </main>
-  </body>
-</html>
+<BaseLayout title="Astro + Biome">
+  <h1>Astro + Biome</h1>
+  <Button>Mi Botón</Button>
+</BaseLayout>

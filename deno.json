@@ -2,6 +2,7 @@
   "name": "astro-test",
   "version": "0.0.1",
   "description": "Proyecto Astro + Biome con Deno",
+  "exports": "./src/pages/index.astro",
   "tasks": {
     "dev": "deno run --allow-all npm:astro dev",
     "build": "deno run --allow-all npm:astro build",
