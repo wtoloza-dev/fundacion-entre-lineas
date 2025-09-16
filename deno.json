@@ -1,0 +1,35 @@
+{
+  "name": "astro-test",
+  "version": "0.0.1",
+  "description": "Proyecto Astro + Biome con Deno",
+  "tasks": {
+    "dev": "deno run --allow-all npm:astro dev",
+    "build": "deno run --allow-all npm:astro build",
+    "preview": "deno run --allow-all npm:astro preview",
+    "check": "deno run --allow-all npm:@biomejs/biome check .",
+    "check:fix": "deno run --allow-all npm:@biomejs/biome check --write .",
+    "format": "deno run --allow-all npm:prettier --write .",
+    "format:check": "deno run --allow-all npm:prettier --check ."
+  },
+  "imports": {
+    "astro": "npm:astro@latest",
+    "@biomejs/biome": "npm:@biomejs/biome@latest"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve"
+  },
+  "lint": {
+    "include": ["src/"],
+    "exclude": ["node_modules/", "dist/", ".astro/", "public/"]
+  }
+}
