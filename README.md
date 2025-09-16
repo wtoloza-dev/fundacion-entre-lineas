@@ -1,43 +1,82 @@
-# Astro Starter Kit: Minimal
+# Fundación Entrelíneas
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio web oficial de la Fundación Entrelíneas, desarrollado con Astro y Deno.
+
+## 🚀 Tecnologías
+
+- **Astro** - Framework web moderno
+- **Deno** - Runtime de JavaScript/TypeScript
+- **SCSS** - Preprocesador CSS
+- **GitHub Pages** - Hosting estático
+
+## 🛠️ Desarrollo
+
+### Prerrequisitos
+
+- [Deno](https://deno.land/) instalado
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/wtoloza-dev/fundacion-entre-lineas.git
+
+# Navegar al directorio
+cd fundacion-entre-lineas
+
+# Instalar dependencias
+deno task install
+
+# Ejecutar en modo desarrollo
+deno task dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Scripts disponibles
 
-## 🚀 Project Structure
+- `deno task dev` - Servidor de desarrollo
+- `deno task build` - Build para producción
+- `deno task preview` - Preview del build
+- `deno task check` - Linting con Biome
+- `deno task format` - Formateo de código
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del proyecto
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/
+│   ├── atoms/          # Componentes básicos (Button, etc.)
+│   └── organisms/      # Componentes complejos (Header, Footer, etc.)
+├── layouts/
+│   └── BaseLayout.astro # Layout principal
+├── pages/
+│   └── index.astro     # Página principal
+└── styles/
+    └── _variables.scss # Variables SCSS globales
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🌐 Despliegue
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El sitio se despliega automáticamente en GitHub Pages cuando se hace push a la rama `main`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+**URL de producción**: https://wtoloza-dev.github.io/fundacion-entre-lineas
 
-## 🧞 Commands
+## 📝 Secciones
 
-All commands are run from the root of the project, from a terminal:
+- **Quiénes somos** - Información sobre la fundación
+- **Qué hacemos** - Servicios y actividades
+- **Actividades** - Eventos y programas
+- **Galería** - Imágenes y videos
+- **Colaboradores** - Equipo y partners
+- **Contacto** - Información de contacto
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🤝 Contribución
 
-## 👀 Want to learn more?
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.

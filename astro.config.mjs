@@ -3,8 +3,9 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  // Configuración para Deno
-  adapter: undefined, // Usar el adaptador por defecto
+  // Configuración para GitHub Pages
+  site: 'https://wtoloza-dev.github.io',
+  base: '/fundacion-entre-lineas',
   output: 'static', // Generación estática
   build: {
     format: 'file', // Generar archivos estáticos
