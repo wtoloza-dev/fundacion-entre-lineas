@@ -1,9 +1,35 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Button from '@components/atoms/Button.astro';
+import WhoWeAre from '@components/organisms/WhoWeAre.astro';
+import WhatWeDo from '@components/organisms/WhatWeDo.astro';
+import Activities from '@components/organisms/Activities.astro';
+import Gallery from '@components/organisms/Gallery.astro';
+import Collaborators from '@components/organisms/Collaborators.astro';
+import Contact from '@components/organisms/Contact.astro';
 ---
 
-<BaseLayout title="Astro + Biome">
-  <h1>Astro + Biome</h1>
-  <Button>Mi Botón</Button>
+<BaseLayout title="Entrelíneas">
+  <section id="quienes-somos">
+    <WhoWeAre />
+  </section>
+
+  <section id="que-hacemos">
+    <WhatWeDo />
+  </section>
+
+  <section id="actividades">
+    <Activities />
+  </section>
+
+  <section id="galeria">
+    <Gallery />
+  </section>
+
+  <section id="colaboradores">
+    <Collaborators />
+  </section>
+
+  <section id="contacto">
+    <Contact />
+  </section>
 </BaseLayout>
