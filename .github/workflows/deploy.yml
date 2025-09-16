@@ -26,7 +26,9 @@ jobs:
           deno-version: v2.x
       
       - name: Install dependencies
-        run: deno install --allow-all --global npm:astro
+        run: |
+          deno install --allow-all --global npm:astro
+          deno add -D npm:sass-embedded
       
       - name: Build with Astro
         run: deno task build
