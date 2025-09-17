@@ -1,9 +1,36 @@
 ---
 // WhoWeAre component
+
+import SectionTitle from '../molecules/SectionTitle.astro';
+import IconText from '../atoms/IconText.astro';
+
+const Icons = [
+  {
+    icon: '/icons/who-we-are-icon.svg',
+    description: 'Quiénes somos',
+    textClass: 'text-center',
+  },
+  {
+    icon: '/icons/mission-icon.svg',
+    description: 'Misión',
+    textClass: 'text-left',
+  },
+  {
+    icon: '/icons/vision-icon.svg',
+    description: 'Visión',
+    textClass: 'text-left',
+  }
+];
 ---
 
 <div class="who-we-are">
-  <h2>Quiénes somos</h2>
+  <SectionTitle orientation="left">
+    <div class="icons-container">
+        {Icons.map(({ icon, description, textClass }) => (
+      <IconText icon={icon} description={description} textClass={textClass} />
+    ))}
+    </div>
+  </SectionTitle>
 </div>
 
 <style lang="scss">
@@ -20,5 +47,14 @@
       color: $color-text;
       font-size: $font-size-2xl;
     }
+  }
+
+  .icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
   }
 </style>

@@ -6,9 +6,14 @@ import Activities from '@components/organisms/Activities.astro';
 import Gallery from '@components/organisms/Gallery.astro';
 import Collaborators from '@components/organisms/Collaborators.astro';
 import Contact from '@components/organisms/Contact.astro';
+import Hero from '@components/organisms/Hero.astro';
 ---
 
 <BaseLayout title="Entrelíneas">
+  <section id="hero">
+    <Hero />
+  </section>
+
   <section id="quienes-somos">
     <WhoWeAre />
   </section>
