@@ -1,24 +1,33 @@
 ---
 // Gallery component
+import SectionTitle from '../molecules/SectionTitle.astro';
 ---
 
 <div class="gallery">
-  <h2>Galería</h2>
+  <SectionTitle orientation="right">
+    <div class="gallery__title">Galería</div>
+  </SectionTitle>
+  <div class="gallery__content">
+    <p class="gallery__description">Contenido de galería...</p>
+  </div>
 </div>
 
 <style lang="scss">
   .gallery {
-    height: 200px;
     background-color: $color-bg-light;
+    border: 1px solid $border-color;
+  }
+
+  .gallery__content {
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $border-color;
+  }
 
-    h2 {
-      margin: 0;
-      color: $color-text;
-      font-size: $font-size-2xl;
-    }
+  .gallery__description {
+    margin: 0;
+    color: $color-text;
+    font-size: $font-size-base;
   }
 </style>

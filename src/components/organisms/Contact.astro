@@ -1,24 +1,33 @@
 ---
 // Contact component
+import SectionTitle from '../molecules/SectionTitle.astro';
 ---
 
 <div class="contact">
-  <h2>Contacto</h2>
+  <SectionTitle orientation="right">
+    <div class="contact__title">Contacto</div>
+  </SectionTitle>
+  <div class="contact__content">
+    <p class="contact__description">Contenido de contacto...</p>
+  </div>
 </div>
 
 <style lang="scss">
   .contact {
-    height: 200px;
     background-color: $color-bg-light;
+    border: 1px solid $border-color;
+  }
+
+  .contact__content {
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $border-color;
+  }
 
-    h2 {
-      margin: 0;
-      color: $color-text;
-      font-size: $font-size-2xl;
-    }
+  .contact__description {
+    margin: 0;
+    color: $color-text;
+    font-size: $font-size-base;
   }
 </style>

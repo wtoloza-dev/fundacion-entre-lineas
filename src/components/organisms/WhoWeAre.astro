@@ -24,11 +24,9 @@ const Icons = [
 ---
 
 <div class="who-we-are">
+  {/* TITLE */}
   <SectionTitle orientation="left">
-    <div class="who-we-are__title">Quiénes somos</div>
-  </SectionTitle>
-  <div class="who-we-are__content">
-    <div class="who-we-are__icons">
+    <div class="who-we-are__title">
       {
         Icons.map(({ icon, description, textClass }) => (
           <IconText
@@ -39,25 +37,39 @@ const Icons = [
         ))
       }
     </div>
+  </SectionTitle>
+  {/* CONTENT */}
+  <div class="who-we-are__content">
+    <h2>Quiénes somos</h2>
   </div>
 </div>
 
 <style lang="scss">
   .who-we-are {
-    height: 200px;
-    background-color: $color-bg-light;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid $border-color;
+    width: 100%;
   }
 
-  .who-we-are__icons {
+  .who-we-are__title {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px; // Limita el ancho máximo para mejor distribución
+  }
+
+  .who-we-are__content {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 </style>
