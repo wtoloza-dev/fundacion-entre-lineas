@@ -1,75 +1,36 @@
 ---
 // WhoWeAre component
-
 import SectionTitle from '../molecules/SectionTitle.astro';
-import IconText from '../atoms/IconText.astro';
-
-const Icons = [
-  {
-    icon: '/icons/who-we-are-icon.svg',
-    description: 'Quiénes somos',
-    textClass: 'text-center',
-  },
-  {
-    icon: '/icons/mission-icon.svg',
-    description: 'Misión',
-    textClass: 'text-left',
-  },
-  {
-    icon: '/icons/vision-icon.svg',
-    description: 'Visión',
-    textClass: 'text-left',
-  },
-];
 ---
 
 <div class="who-we-are">
-  {/* TITLE */}
   <SectionTitle orientation="left">
-    <div class="who-we-are__title">
-      {
-        Icons.map(({ icon, description, textClass }) => (
-          <IconText
-            icon={icon}
-            description={description}
-            textClass={textClass}
-          />
-        ))
-      }
-    </div>
+    <div class="who-we-are__title">Quiénes somos</div>
   </SectionTitle>
-  {/* CONTENT */}
   <div class="who-we-are__content">
-    <h2>Quiénes somos</h2>
+    <p class="who-we-are__description">Contenido de quiénes somos...</p>
   </div>
 </div>
 
 <style lang="scss">
   .who-we-are {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .who-we-are__title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-sm;
-    width: 100%;
-    max-width: 800px; // Limita el ancho máximo para mejor distribución
+    background-color: $color-bg-light;
+    border: 1px solid $border-color;
   }
 
   .who-we-are__content {
-    height: 400px;
+    height: 200px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    text-align: center;
+    max-width: 1200px;
+  }
+
+  .who-we-are__description {
+    margin: 0;
+    height: 100%;
+    color: $color-text;
+    font-size: $font-size-base;
   }
 </style>
