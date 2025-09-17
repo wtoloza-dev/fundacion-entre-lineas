@@ -2,33 +2,33 @@
 // IconText component
 
 export interface Props {
-    icon: string;
-    description: string;
-    textClass: string;
+  icon: string;
+  description: string;
+  textClass: string;
 }
 
 const { icon, description, textClass } = Astro.props;
 ---
 
 <div class="icon-text">
-    <img src={icon} alt={description} class="icon" />
-    <h2 class={textClass}>{description}</h2>
+  <img src={icon} alt={description} class="icon" />
+  <h2 class={textClass}>{description}</h2>
 </div>
 
 <style lang="scss">
-    .icon-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: $spacing-sm;
-    }
+  .icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+  }
 
-    .text-center {
-        margin: 0;
-    }
+  .text-center {
+    margin: 0;
+  }
 
-    .text-left {
-        margin: 0;
-    }
+  .text-left {
+    margin: 0;
+  }
 </style>

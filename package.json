@@ -12,7 +12,9 @@
     "format": "biome format src/",
     "format:fix": "biome format --write src/",
     "check": "biome check src/",
-    "check:fix": "biome check --write src/"
+    "check:fix": "biome check --write src/",
+    "prettier": "prettier --check \"src/**/*.astro\"",
+    "prettier:fix": "prettier --write \"src/**/*.astro\""
   },
   "dependencies": {
     "astro": "^5.13.7"

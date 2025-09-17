@@ -9,12 +9,16 @@
     "preview": "deno run --allow-all npm:astro preview",
     "check": "deno run --allow-all npm:@biomejs/biome check .",
     "check:fix": "deno run --allow-all npm:@biomejs/biome check --write .",
-    "format": "deno run --allow-all npm:prettier --write .",
-    "format:check": "deno run --allow-all npm:prettier --check ."
+    "format": "deno run --allow-all npm:prettier --write \"src/**/*.astro\"",
+    "format:check": "deno run --allow-all npm:prettier --check \"src/**/*.astro\"",
+    "format:all": "deno run --allow-all npm:prettier --write .",
+    "format:all:check": "deno run --allow-all npm:prettier --check ."
   },
   "imports": {
     "astro": "npm:astro@latest",
-    "@biomejs/biome": "npm:@biomejs/biome@latest"
+    "@biomejs/biome": "npm:@biomejs/biome@latest",
+    "prettier": "npm:prettier@latest",
+    "prettier-plugin-astro": "npm:prettier-plugin-astro@latest"
   },
   "compilerOptions": {
     "allowJs": true,

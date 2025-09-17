@@ -2592,7 +2592,9 @@
   "workspace": {
     "dependencies": [
       "npm:@biomejs/biome@latest",
-      "npm:astro@latest"
+      "npm:astro@latest",
+      "npm:prettier-plugin-astro@latest",
+      "npm:prettier@latest"
     ],
     "packageJson": {
       "dependencies": [

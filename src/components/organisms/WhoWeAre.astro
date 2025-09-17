@@ -19,16 +19,22 @@ const Icons = [
     icon: '/icons/vision-icon.svg',
     description: 'Visión',
     textClass: 'text-left',
-  }
+  },
 ];
 ---
 
 <div class="who-we-are">
   <SectionTitle orientation="left">
     <div class="icons-container">
-        {Icons.map(({ icon, description, textClass }) => (
-      <IconText icon={icon} description={description} textClass={textClass} />
-    ))}
+      {
+        Icons.map(({ icon, description, textClass }) => (
+          <IconText
+            icon={icon}
+            description={description}
+            textClass={textClass}
+          />
+        ))
+      }
     </div>
   </SectionTitle>
 </div>
