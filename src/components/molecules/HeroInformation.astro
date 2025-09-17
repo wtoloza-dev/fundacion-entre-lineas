@@ -2,12 +2,14 @@
 // HeroInformation component
 ---
 
-<div class="hero-information">
-  <h1>Leemos, creamos, pensamos contigo</h1>
-  <div class="hero-information-subtitle">
-    <h5>Donde la cultura se vive y se comparte</h5>
+<div class="hero-info">
+  <h1 class="hero-info__title">Leemos, creamos, pensamos contigo</h1>
+  <div class="hero-info__subtitle">
+    <h5 class="hero-info__subtitle-text">
+      Donde la cultura se vive y se comparte
+    </h5>
   </div>
-  <h4>
+  <h4 class="hero-info__description">
     En Fundación Entrelineas creemos que los libros, el arte y el pensamiento
     crítico transforman realidades. Aquí encontrarás un espacio para descubrir,
     reflexionar y compartir.
@@ -15,7 +17,7 @@
 </div>
 
 <style lang="scss">
-  .hero-information {
+  .hero-info {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -25,7 +27,7 @@
     gap: $spacing-md;
   }
 
-  h1 {
+  .hero-info__title {
     font-size: $font-size-2xl;
     font-weight: 600;
     color: $color-text-light;
@@ -33,13 +35,13 @@
     margin: 0;
   }
 
-  .hero-information-subtitle {
+  .hero-info__subtitle {
     background-color: $color-primary;
     padding: $spacing-sm;
     width: fit-content;
   }
 
-  h5 {
+  .hero-info__subtitle-text {
     font-size: $font-size-base;
     font-weight: 800;
     color: $color-text;
@@ -47,7 +49,7 @@
     margin: 0;
   }
 
-  h4 {
+  .hero-info__description {
     font-size: $font-size-base;
     font-weight: 600;
     color: $color-text-light;

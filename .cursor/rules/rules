@@ -1,0 +1,73 @@
+# Cursor Rules for Fundación Entrelineas
+
+## Project Overview
+This is an Astro project for Fundación Entrelineas, a cultural foundation website. The project uses SCSS for styling, follows BEM methodology, and implements a component-based architecture.
+
+## Technology Stack
+- **Framework**: Astro
+- **Styling**: SCSS with global variables
+- **Language**: TypeScript/JavaScript
+- **Architecture**: Atomic Design (atoms, molecules, organisms)
+
+## Code Style Guidelines
+
+### SCSS/CSS Rules
+- Follow BEM methodology for CSS class naming
+- Use SCSS variables from `_variables.scss` for all colors, spacing, and typography
+- Maximum nesting depth: 3 levels
+- Use semantic HTML elements
+- Mobile-first responsive design
+- No inline styles
+- Avoid `!important` unless absolutely necessary
+
+### Component Structure
+- Use Atomic Design principles (atoms, molecules, organisms)
+- Follow the established component template structure
+- Use TypeScript interfaces for props
+- Implement proper prop destructuring with defaults
+- Use semantic class names with BEM methodology
+
+### File Organization
+- Components in `src/components/` organized by atomic design levels
+- Styles in `src/styles/` with global variables and utilities
+- Use absolute imports with `@` alias for cleaner imports
+- Follow the established file naming conventions
+
+### Naming Conventions
+- **Files**: kebab-case (e.g., `hero-information.astro`)
+- **CSS Classes**: BEM methodology (e.g., `.hero-container__title--large`)
+- **Variables**: kebab-case with descriptive prefixes (e.g., `$color-primary`)
+- **Components**: PascalCase (e.g., `HeroInformation`)
+
+## Global Styles
+- Import `global.scss` automatically in all SCSS files
+- Use `scopedStyleStrategy: 'where'` for better global style compatibility
+- Apply Inter font family globally
+- Use consistent spacing and color variables
+
+## Performance Guidelines
+- Optimize images and assets
+- Use efficient CSS selectors
+- Minimize bundle size
+- Use CSS Grid and Flexbox for layouts
+- Implement proper responsive design
+
+## Code Quality
+- Write maintainable, readable code
+- Use descriptive variable and function names
+- Keep components focused and single-purpose
+- Follow established patterns consistently
+- Document complex logic and components
+
+## When Making Changes
+1. Always use existing SCSS variables instead of hardcoded values
+2. Follow the established component structure
+3. Maintain consistency with existing code patterns
+4. Test changes across different screen sizes
+5. Ensure accessibility standards are met
+
+## Reference Files
+- Style rules: `.cursor/rules/style_rules.md`
+- SCSS documentation: `src/styles/README.md`
+- Variables: `src/styles/_variables.scss`
+- Global styles: `src/styles/global.scss`

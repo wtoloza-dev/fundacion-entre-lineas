@@ -10,6 +10,8 @@ export default defineConfig({
   build: {
     format: 'file', // Generar archivos estáticos
   },
+  // Configuración de estilos globales
+  scopedStyleStrategy: 'where',
   // Configuración de alias
   vite: {
     resolve: {
@@ -25,7 +27,7 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use 'src/styles/variables.scss' as *;`,
+          additionalData: `@import './src/styles/global.scss';`,
         },
       },
     },

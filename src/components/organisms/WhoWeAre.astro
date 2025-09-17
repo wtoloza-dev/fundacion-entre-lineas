@@ -25,7 +25,7 @@ const Icons = [
 
 <div class="who-we-are">
   <SectionTitle orientation="left">
-    <div class="icons-container">
+    <div class="who-we-are__icons">
       {
         Icons.map(({ icon, description, textClass }) => (
           <IconText
@@ -47,15 +47,9 @@ const Icons = [
     align-items: center;
     justify-content: center;
     border: 1px solid $border-color;
-
-    h2 {
-      margin: 0;
-      color: $color-text;
-      font-size: $font-size-2xl;
-    }
   }
 
-  .icons-container {
+  .who-we-are__icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

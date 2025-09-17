@@ -2,12 +2,12 @@
 // Footer component
 ---
 
-<div class="footer-content">
-  <p>Footer</p>
+<div class="footer">
+  <p class="footer__text">Footer</p>
 </div>
 
 <style lang="scss">
-  .footer-content {
+  .footer {
     height: $footer-height;
     background-color: $color-bg-dark;
     color: white;
@@ -15,16 +15,16 @@
     align-items: center;
     justify-content: center;
     font-family: $font-family;
+  }
 
-    p {
-      margin: 0;
-      font-size: $font-size-base;
-      color: $color-text-light;
+  .footer__text {
+    margin: 0;
+    font-size: $font-size-base;
+    color: $color-text-light;
 
-      &:hover {
-        color: white;
-        transition: color 0.2s ease;
-      }
+    &:hover {
+      color: white;
+      transition: color 0.2s ease;
     }
   }
 </style>

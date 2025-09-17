@@ -11,8 +11,8 @@ const { icon, description, textClass } = Astro.props;
 ---
 
 <div class="icon-text">
-  <img src={icon} alt={description} class="icon" />
-  <h2 class={textClass}>{description}</h2>
+  <img src={icon} alt={description} class="icon-text__icon" />
+  <h2 class={`icon-text__text icon-text__text--${textClass}`}>{description}</h2>
 </div>
 
 <style lang="scss">
@@ -24,11 +24,15 @@ const { icon, description, textClass } = Astro.props;
     gap: $spacing-sm;
   }
 
-  .text-center {
+  .icon-text__text {
     margin: 0;
   }
 
-  .text-left {
-    margin: 0;
+  .icon-text__text--center {
+    text-align: center;
+  }
+
+  .icon-text__text--left {
+    text-align: left;
   }
 </style>

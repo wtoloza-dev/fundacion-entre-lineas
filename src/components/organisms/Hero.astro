@@ -3,19 +3,19 @@
 import HeroInformation from '@components/molecules/HeroInformation.astro';
 ---
 
-<div class="hero-container">
+<div class="hero">
   <HeroInformation />
-  <div class="hero-image-container"></div>
+  <div class="hero__image"></div>
 </div>
 
 <style lang="scss">
-  .hero-container {
+  .hero {
     display: flex;
     flex-direction: row;
     max-height: 400px;
   }
 
-  .hero-image-container {
+  .hero__image {
     flex: 1;
     height: 400px;
     background-image:
