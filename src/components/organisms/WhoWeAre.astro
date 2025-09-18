@@ -1,6 +1,7 @@
 ---
 // WhoWeAre component
 import SectionTitle from '../molecules/SectionTitle.astro';
+import SectionInformation from '../molecules/SectionInformation.astro';
 ---
 
 <div class="who-we-are">
@@ -8,7 +9,8 @@ import SectionTitle from '../molecules/SectionTitle.astro';
     <div class="who-we-are__title">Quiénes somos</div>
   </SectionTitle>
   <div class="who-we-are__content">
-    <p class="who-we-are__description">Contenido de quiénes somos...</p>
+    <SectionInformation />
+    <img class="who-we-are__img" src="/fundacion-entre-lineas/imgi_01.jpg" alt="Reunión_fundación_entrelineas"/>
   </div>
 </div>
 
@@ -17,7 +19,7 @@ import SectionTitle from '../molecules/SectionTitle.astro';
   }
 
   .who-we-are__content {
-    height: 200px;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,5 +29,11 @@ import SectionTitle from '../molecules/SectionTitle.astro';
     margin: 0;
     color: $color-text;
     font-size: $font-size-base;
+  }
+
+  .who-we-are__img {
+    width: 640px;
+    height: 640px;
+    object-fit: cover;
   }
 </style>
